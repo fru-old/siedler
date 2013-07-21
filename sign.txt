@@ -1,0 +1,5 @@
+#Selfsigning the jar
+
+keytool -genkey -keyalg rsa -alias fru
+jarsigner game.jar fru
+

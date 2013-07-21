@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<style>
+			a{
+				position: relative;
+			}
+			
+			a div{
+				position: absolute;
+				background: url('play.png') no-repeat center;
+			}
+		
+			span{
+				margin-left: 3px;
+			}
+
+			span + a{
+				float: right;
+				margin-right: 4px;
+				margin-top: -5px;
+			}
+			
+			body {
+				width:500px;
+				margin:0px auto;
+				text-align:left;
+			}
+			
+			h1{
+				text-align: center;
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Siedler von Catan</h1>
+
+		<script src="http://www.java.com/js/deployJava.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			var dir = location.href.substring(0,location.href.lastIndexOf('/')+1);
+		    var url = dir + "webstart.jnlp";
+		    deployJava.createWebStartLaunchButton(url, '1.6.0');
+			deployJava.createWebStartLaunchButton(url, '1.6.0');
+			$(function(){
+				$('a img').first().attr('src','field.jpg');
+				$('a').first().hover(function(){ //in
+					var image = $('a img');
+					$(this).prepend('<div style="width:'+image.width()+'px;height:'+image.height()+'px;"></div>');
+				},function(){	//out
+					$(this).find('div').remove();
+				});
+				$('a').last().before('<br/><br/><span>Clicken Sie hier um Sieder zu starten:</span>');
+			});
+		</script>
+	</body>
+</html>

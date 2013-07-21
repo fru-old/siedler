@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://fru.github.io/siedler" href="webstart.jnlp">
+    <information>
+        <title>Siedler von Catan</title>
+        <vendor>Florian Rüberg</vendor>
+    </information>
+    <resources>
+        <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="game.jar" main="true" />
+    </resources>
+    <application-desc
+         name="Siedler von Catan"
+         main-class="main.Main"
+         width="300"
+         height="300">
+     </application-desc>
+     <update check="background"/>
+	<security>
+	  <all-permissions/>
+	</security>
+</jnlp>                                   
+
